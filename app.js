@@ -238,6 +238,41 @@ while (3 ** L <= number1) {
   }
 }
 
+// While4. n va m butun musbat sonlari berilgan (n > m). n sonini m soniga bo'lib butun va qoldiq qismlarini bo'lish va qoldiqni olish amallarini ishlatmasdan topuvchi programma tuzilsin.
+let X = 17;
+let Y = 5;
+let butunQism = 0;
+let qoldiq = X;
+while (qoldiq >= Y) {
+  qoldiq -= Y;
+  butunQism++;
+}
+console.log(
+  `Berilgan sonlar:${X}, ${Y} Butun qism: ${butunQism} Qoldiq: ${qoldiq}`
+);
+
+// While5. n butun soni berilgan (n > 0). Bo'lib butun va qoldiq qismlarini aniqlash orqali, berilgan son raqamlarini teskari tartibda chiqaruvchi programma tuzilsin.
+let Z = 1234;
+let teskari = "";
+while (Z > 0) {
+  let qoldiq1 = Z % 10;
+  teskari += qoldiq1;
+  Z = Math.floor(Z / 10);
+}
+console.log(`Sonni teskari tartibi: ${teskari}`);
+
+// While6. n butun soni berilgan (n > 0). Bo'lib butun va qoldiq qismlarini aniqlash orqali, berilgan son raqamlari yig'indisini va raqamlari sonini chiqaruvchi programma tuzilsin.
+let F = 122345;
+let natija1 = 0;
+let counter4 = 0;
+while (F > 0) {
+  let qoldiq2 = F % 10;
+  natija1 += qoldiq2;
+  F = Math.floor(F / 10);
+  counter4++;
+}
+console.log(`Raqamalar yigindisi = ${natija1}, raqamlar soni = ${counter4}`);
+
 // While7. n butun soni berilgan (n > 0). Bo'lib butun va qoldiq qismlarini aniqlash orqali, berilgan son raqamlarining orasida 2 raqami bor-yo'qligini aniqlovchi programma tuzilsin.
 let s1 = 462;
 let u1 = s1 % 10;
