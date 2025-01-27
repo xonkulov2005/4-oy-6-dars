@@ -155,3 +155,129 @@ console.log(result1);
 
 // 15-MASALA
 // For17. A va B butun soni berilgan (A < B). A va B sonlari orasidagi barcha butun sonlarni chiqaruvchi programma tuzilsin. Bunda A soni 1 marta, (A + 1) soni 2 marta chiqariladi va xokazo.
+let o = 5,
+  p = 1,
+  counter2 = 0;
+for (let i = p; i <= o; i++) {
+  counter2++;
+  for (let k = 1; k <= counter2; k++) {
+    console.log(i);
+  }
+}
+
+// 16-MASALA
+// For18. Sonning barcha bo’luvchilarini, ularning sonini va yig’indisini chiqaruvchi dastur tuzing.
+let n1 = 18;
+let boluvchilar = "";
+let yigindi1 = 0;
+let soni = 0;
+
+for (let i = 1; i <= n1; i++) {
+  if (n1 % i === 0) {
+    boluvchilar += i + " ";
+    yigindi1 += i;
+    soni++;
+  }
+}
+console.log(
+  `Son: ${n1}  Bo‘luvchilar: ${boluvchilar} Bo‘luvchilar soni: ${soni}  Bo‘luvchilar yig‘indisi: ${yigindi1}`
+);
+
+// 17-MASALA
+// For19. n butun soni berilgan (n > 1). N sonini tub yoki tub emasligini aniqlovchi programma tuzilsin.
+
+// 18-MASALA
+// For20. Sonlarni quyidagi tartibda chiqaruvchi dastur tuzing. N = 5 bo’lganda,
+// 1
+// 1 2
+// 1 2 3
+// 1 2 3 4
+// 1 2 3 4 5
+let q = 5;
+for (let i = 1; i <= q; i++) {
+  let qator = "";
+  for (let j = 1; j <= i; j++) {
+    qator += j + " ";
+  }
+  console.log(qator.trim());
+}
+
+// While1. A va B butun musbat sonlari berilgan (A> B). A usunlikdagi kesmada maksimal darajada B kesma joylashtirilgan. A kesmaning bo'sh qismini aniqlovchi programma tuzilsin. Ko'paytirish va bo'lish amallarini ishlatmang.
+
+let r = 18;
+let t = 4;
+let boshJoy = 0;
+let qolganJoy = 0;
+let i = 0;
+while (i <= r) {
+  i++;
+  boshJoy = parseInt(r / t);
+  qolganJoy = r % t;
+}
+console.log(`${boshJoy} ta joylashtirilgan.`);
+console.log(`${qolganJoy} ta bosh joy qolgan `);
+
+// While2. A va B butun musbat sonlari berilgan (A > B). A usunlikdagi kesmada B kesmadan nechta joylashtirish mumkinligini aniqlovchi programma tuzilsin. Ko'paytirish va bo'lish amallarini ishlatmang.
+let son2 = 16;
+let son3 = 5;
+let result2 = son3;
+let counter3 = 0;
+while (result2 < son2) {
+  result2 += son3;
+  counter3++;
+}
+console.log(counter3);
+
+// While3. n butun soni berilgan (n > 0). Agar n soni 3 ning darajasi bo'lsa "3 - ning darajasi", aks xolda "3 - ning darajasi emas” degan natija chiqaruvchi programma tuzilsin. Qoldiqli bo'lish va bo'lish amallarini ishlatmang.
+let number1 = 27;
+let L = 1;
+while (3 ** L <= number1) {
+  L++;
+  if (number1 === 3 ** L) {
+    console.log(`3ning darajasi`);
+  }
+}
+
+// While7. n butun soni berilgan (n > 0). Bo'lib butun va qoldiq qismlarini aniqlash orqali, berilgan son raqamlarining orasida 2 raqami bor-yo'qligini aniqlovchi programma tuzilsin.
+let s1 = 462;
+let u1 = s1 % 10;
+let y1 = (s1 % 100) / 10;
+let z1 = s1 / 100;
+let K1 = 0;
+while (K1 <= s1) {
+  K1++;
+  if (u1 == 2 || y1 == 2 || z1 == 2) {
+    console.log("Ikki raqami mavjud");
+    break;
+  } else {
+    console.log("Ikki raqami mavjud emas boshqa raqam kiriting!");
+    break;
+  }
+}
+
+// While8. n butun soni berilgan (n > 0). Bo'lib butun va qoldiq qismlarini aniqlash orqali, berilgan son raqamlarining orasida toq raqamlar bor-yo'qligini aniqlovchi programma tuzilsin.
+let s = 468;
+let u = s % 10;
+let y = (s % 100) / 10;
+let z = s / 100;
+let K = 0;
+while (K <= s) {
+  K++;
+  if (u % 2 == 1 || y % 2 == 1 || z % 2 == 1) {
+    console.log("Toq raqam mavjud");
+    break;
+  } else {
+    console.log("Toq raqam mavjud emas boshqa raqam kiriting!");
+    break;
+  }
+}
+// While9. Palindromik songa tekshirish dasturini yozing. True yoki False qaytarsin.
+// Palindromik son – boshidan va oxiridan o’qilish bir xil bo’lgan son, masalan 1345431, 45788754
+let w = (1345431).toString();
+let x = " ";
+let I = w.length - 1;
+while (I >= 0) {
+  x += w[I];
+  I--;
+}
+console.log(+w == +x);
